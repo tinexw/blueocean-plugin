@@ -51,7 +51,7 @@ module.exports.commands = [{
             self.setValue('@nameInput', folderName);
             self.click('@folderType');
             self.waitForElementVisible('@submit');
-            self.click('@submit');
+            self.click('@submit', () => console.log('click submit for folder', folderName));
 
             // We should now be on the config page
             self.waitForElementPresent('@configForm', 30000,() => {
